@@ -27,3 +27,9 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+#Main class
+src/Main
+
+#idea folder
+.idea/**
