@@ -3,8 +3,6 @@ package project.euler.exercises;
 public class SumSquareDifference {
 
     public int getSumOfSquares(int n){
-        System.out.println(n);
-
         int sum =0;
         for(int i=1;i<=n;i++){
             sum+=(i*i);
@@ -14,8 +12,6 @@ public class SumSquareDifference {
     }
 
     public int getSquareOfSum(int n){
-        System.out.println(n);
-
         int sum=0;
         for(int i=1;i<=n;i++){
             sum+=i;
@@ -26,6 +22,6 @@ public class SumSquareDifference {
 
     public int getSumSquareDifference(int n){
         System.out.println(n);
-        return getSumOfSquares(n)-getSquareOfSum(n);
+        return getSquareOfSum(n)-getSumOfSquares(n);
     }
 }
