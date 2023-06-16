@@ -5,25 +5,33 @@ import java.util.List;
 
 public class HighlyDivisibleTriangularNumber {
 
+    //This takes forever!!! I found a solution I found a good solution but this was the one I could came up with... so uploading this.
     public int getDivisors(int n){
         int counter = 0;
-        for(int i=1;i<=n;i++){
-            if(n%i==0){
-                counter++;
+        int sqrt = (int) Math.sqrt(n);
+
+        for (int i = 1; i <= sqrt; i++) {
+            if (n % i == 0) {
+                counter += 2;
             }
         }
+        if (sqrt * sqrt == n) {
+            counter--;
+        }
+
         return counter;
     }
 
-    public void getTriangleNumberWith500Divisors(){
+
+    public int getTriangleNumberWith500Divisors(){
         int number = 0;
         int divs = 0;
         int i =1;
         while(getDivisors(number)<500){
             number+=i;
-            System.out.println("number "+number);
-            System.out.println();
+            //System.out.println("number "+number);
             i++;
         }
+        return number;
     }
 }
